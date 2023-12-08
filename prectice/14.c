@@ -6,5 +6,5 @@ int main()
     scanf("%d",&ascii);
     char ch=ascii;
     printf("ascii value %c",ch);
-    return 0;
+    
 }
