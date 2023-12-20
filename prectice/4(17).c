@@ -1,23 +1,18 @@
 #include<stdio.h>
 int main(int argc, char const *argv[])
 {
-    int i,a,b,c;
+    int i,a,b=0,c=0;
     while (i<5)
     {
         printf("enter number");
         scanf("%d",&a);
         if (a%2==0)
         {
-           int n=0;
-           n++;
-           b=b+n;
+           b++;
         }
         else
         {
-            int m=0;
-            m++;
-            c=c+m;
-
+            c++;
         }
     i++;
     }
