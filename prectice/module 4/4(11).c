@@ -1,14 +1,15 @@
 #include<stdio.h>
 int main(int argc, char const *argv[])
 {
-    char a;
+    char name[20];
     int i;
-    for ( i = 0; i < 5; i++)
+    for (i = 0; i < 5; i++)
     {
-        printf("enter name:");
-        scanf("%s",&a);
+        printf("enter name:-");
+        scanf("%s",name);
+        printf("your name:-%s\n",name);
     }
-     printf("%s\n",a);
+
 
     return 0;
 }
