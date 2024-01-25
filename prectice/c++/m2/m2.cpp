@@ -1,29 +1,30 @@
 #include<iostream>
+using namespace std;
 class clu
 {
     int a,b,c;
     public:
          clu()
         {
-            printf("enter number:-");
-            scanf("%d%d",&a,&b);
-            printf("enter chose 1.add 2.sub 3.mul 4.div:-");
-            scanf("%d",&c);
+            cout<<"enter number:-";
+            cin>>a>>b;
+            cout<<"enter chose 1.add 2.sub 3.mul 4.div:-";
+            cin>>c;
             switch (c)
             {
             case 1:
-                printf("sum=%d",a+b);
+                cout<<"sum="<<a+b;
                 break;
             case 2:
-                printf("sub=%d",a-b);
+                cout<<"sub="<<a-b;
                 break;
             case 3:
-                printf("mul=%d",a*b);
+                cout<<"mul="<<a*b;
                 break;
             case 4:
-                printf("div=%d",a/b);
+                cout<<"div="<<a/b;
             default:
-                printf("enter velid chose");
+                cout<<"enter velid chose";
                 break;
             }
         }
