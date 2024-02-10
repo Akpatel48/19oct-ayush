@@ -1,24 +1,18 @@
-
 #include<stdio.h>
 int i;
-char c[20],a;
+char c[100];
 void name()
 {
     for (i = 0; i < 5; i++)
     {
-        printf("enter students name:-");
-        scanf("%s",&c[a]);
+        printf("\nenter students name:-");
+        gets(c);
+        printf("students name:-");
+        puts(c);
     }
-    printf("\n%s",c[a]);
-}
-void pri()
-{
-    printf("\n%s",c[a]);
-
 }
 int main(int argc, char const *argv[])
 {
     name();
-    pri();
     return 0;
 }
