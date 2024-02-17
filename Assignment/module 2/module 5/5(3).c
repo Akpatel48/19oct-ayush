@@ -1,0 +1,23 @@
+//Write a program in C to print individual characters of a string in reverse order
+#include<stdio.h>
+char str[30];
+int le=0,i;
+void re()
+{
+    printf("enter string ");
+    scanf("%s",&str);
+    for (i = 0; i < str[i]; i++)
+    {
+        le++;
+    }
+    for (i = le; i >= 0; i--)
+    {
+        printf("%c\n",str[i]);
+    }
+}
+int main(int argc, char const *argv[])
+{
+    re();
+
+    return 0;
+}
