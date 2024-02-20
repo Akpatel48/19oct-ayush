@@ -90,7 +90,7 @@ public:
     {
         cout<<"Please Enter Quanitity:";    //show messages enter Qunaitity
         cin>>quanitity; //enter food quantitiy
-    }   
+    }
     int Sicilianpizza()
     {
         return quanitity*100;  //totale amunt of Bill
@@ -263,6 +263,7 @@ public:
 int main(int argc, char const *argv[])
 {
     custumer_name n1;
+    //char Y='y';
     n1.name();
     top:
     order o1;
@@ -274,7 +275,7 @@ int main(int argc, char const *argv[])
     p1.your_oder();
     s1.Submenu();
     p1.prin();
-    if(repit=='Y')
+    if(repit==tolower('Y'))
     {
         goto top;
     }
