@@ -275,7 +275,7 @@ int main(int argc, char const *argv[])
     p1.your_oder();
     s1.Submenu();
     p1.prin();
-    if(repit==tolower('Y'))
+    if(repit==tolower('Y')||'y')
     {
         goto top;
     }
