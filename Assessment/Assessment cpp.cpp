@@ -256,14 +256,14 @@ public:
     {
         cout<<endl<<"Your Order Will be delivered in 40 Minutes";   //your foode delivererd time
         cout<<endl<<"Thank you FOr Ordering From Tops Tech Fast Food";
-        cout<<endl<<"Would you like to order anything else?Y/N:";
+        cout<<endl<<"Would you like to order anything else?Y/N:"<<endl;
         cin>>repit;
     }
 };
 int main(int argc, char const *argv[])
 {
     custumer_name n1;
-    //char Y='y';
+    char Y='Y';
     n1.name();
     top:
     order o1;
@@ -275,7 +275,7 @@ int main(int argc, char const *argv[])
     p1.your_oder();
     s1.Submenu();
     p1.prin();
-    if(repit==tolower('Y')||'y')
+    if(Y==toupper(repit))
     {
         goto top;
     }
