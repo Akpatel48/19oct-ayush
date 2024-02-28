@@ -1,0 +1,16 @@
+3-What is the difference between OOP and POP?
+
+    -OOP is stands for the Object Oriented Programming
+    -POP is stands for the Procedure Oriented Programming
+
+    -OOP is more secure than the POP
+    -POP is less secure than the OOP
+	
+    -OOP is complex than the POP
+    -POP is simple compare to OOP
+
+    -OOP is slower than the POP
+    -POP is fast compare to OOP
+
+    -OOP follows the bottom to top approach
+    -POP follows the top to bottom approach

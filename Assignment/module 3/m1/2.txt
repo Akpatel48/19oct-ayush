@@ -1,0 +1,36 @@
+2-What is OOP? List OOP concepts
+    -OOP is stands for the Object Oriented Programming
+    -OOP give more important to the Object
+    -OOP is most use in game developments 
+List OOP concepts
+    1.Class:-
+        -Class is a blue print of the object OR
+        -Class is Combination of the data member and member function.
+        -Data Member is a variable which was define in side the class
+        -Member function is a UDF which was define the class body
+    2.Object:-
+        -Object is a instance of the class.
+            syntax:-
+                class name object name;
+    3.Abstraction:-
+        -Use to hide the background detail from the user which was unnecessary for the user.
+        -Hide the background detail
+    4.Encapsulation:-
+        -Wrapping up the data.
+    5.Inheritance:-
+        -Reusability of the code.
+        -type of Inheritance
+            -singel level
+                -one parnt class and one child class
+                -multi level
+                -
+            -multiple level
+                -two parnt class and one child class
+            -hierarchykel
+                ex:-
+                grandparnt(a) class drivd parnt(b,c) class and child(d) child class
+            -hybrid
+                -two or more instance Combination 
+    6.Polymorphism:-
+        -One name many form.
+        -Polymorphism is like a variable but ther are use diffren data type
