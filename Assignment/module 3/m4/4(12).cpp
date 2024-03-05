@@ -6,23 +6,23 @@ class Swap
 {
     int a,b;
 public:
-    friend int Swa(Swap &obj);
+    friend int Swa(Swap &obj1, Swap &obj2);
 };
-int Swa(Swap &obj)
+int Swa(Swap &obj1, Swap&obj2)
 {
     cout<<"enter first number:";
-    cin>>obj.a;
+    cin>>obj1.a;
     cout<<"enter secand number:";
-    cin>>obj.b;
-    cout<<"before swaping a="<<obj.a<<" b="<<obj.b;
-    obj.a=obj.a+obj.b;
-    obj.b=obj.a-obj.b;
-    obj.a=obj.a-obj.b;
-    cout<<endl<<"a="<<obj.a<<endl<<"b="<<obj.b;
+    cin>>obj2.b;
+    cout<<"before swaping a="<<obj1.a<<" b="<<obj2.b;
+    obj1.a=obj1.a+obj2.b;
+    obj2.b=obj1.a-obj2.b;
+    obj1.a=obj1.a-obj2.b;
+    cout<<endl<<"a="<<obj1.a<<endl<<"b="<<obj2.b;
 }
 int main(int argc, char const *argv[])
 {
-    Swap s1;
-    Swa(s1);
+    Swap s1,s2;
+    Swa(s1,s2);
     return 0;
 }
