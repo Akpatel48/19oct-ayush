@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 char repit;
-int quanitity,pizza,burger,sandwich,roll,biryani;;
+int quanitity,pizza,burger,sandwich,roll,biryani,choice,sub_choice;
 class custumer_name //enter custumer dityle
 {
 public:
@@ -18,7 +18,7 @@ public:
 class order //show menu
 {
 public:
-    int choice;
+
     void orde()
     {
         cout<<"what would you like to order?";
@@ -28,38 +28,39 @@ public:
         cin>>choice;
     }
 };
-class menu : public order
+class menu : public order   //inhrit class order
 {
 public:
     int pizzas()    //show type of pizza
     {
+        pizza:
         cout<<"1    Sicilian pizza  Rs.100\n2    Greek pizza    Rs.120\n3    Margherita pizza   Rs.150";
         cout<<endl<<"Please Enter wich Pizza you would like to have?:";
-        cin>>pizza;
+       //cin>>pizza;
     }
     int burgers()   //show type of burgers
     {
         cout<<"\n1    beef burgers  Rs.120\n2    chicken burgers     Rs.150\n3    lamb burgers   Rs.200";
         cout<<endl<<"Please Enter wich Burger you would like to have?:";
-        cin>>burger;
+        //cin>>burger;
     }
     int sandwichs()    //show type of sandwich
     {
         cout<<"1    Grilled Cheese  Rs.80\n2    Ham Sandwich    Rs.100\n3    Nutella Sandwich   Rs.120";
         cout<<endl<<"Please Enter wich Sandwich you would like to have?:";
-        cin>>sandwich;
+        //cin>>sandwich;
     }
     int rolls() //show type of rolls
     {
         cout<<"1    Potato Bread Rolls  Rs.130\n2    Honey Wheat Rolls  Rs.150\n3    Easy Dinner Rolls  Rs.170";
         cout<<endl<<"Please Enter wich Roll you would like to have?:";
-        cin>>roll;
+        //cin>>roll;
     }
     int biryanis()  //show type of biryanis
     {
         cout<<"1    Hyderabadi Biryani  Rs.70\n2    Lucknowi Biryani    Rs.90\n3    Dindigul Biryani    Rs.100";
         cout<<endl<<"Please Enter wich Biryani you would like to have?:";
-        cin>>biryani;
+       // cin>>biryani;
     }
     int main_manu() //select main menu
     {
@@ -83,7 +84,7 @@ public:
         }
     }
 };
-class submenu: public menu  //sub menu function
+class submenu: public menu  //inherit class menu
 {
 public:
     int Quanitity()
@@ -155,7 +156,7 @@ public:
     {
     if(choice==1)   //chek wich main menu ex.1.pizza
     {
-        switch (pizza)  //select submanu item
+        switch (sub_choice)  //select submanu item
         {
         case 1:
             cout<<"1    Sicilian pizza";    //show food name
@@ -173,7 +174,7 @@ public:
     }
     else if (choice==2)
     {
-        switch (burger)
+        switch (sub_choice)
         {
         case 1:
             cout<<"1    beef burgers";
@@ -191,7 +192,7 @@ public:
     }
     else if (choice==3)
     {
-        switch (sandwich)
+        switch (sub_choice)
         {
         case 1:
             cout<<"1    Grilled Cheese";
@@ -209,7 +210,7 @@ public:
     }
     else if (choice==4)
     {
-        switch (roll)
+        switch (sub_choice)
         {
         case 1:
             cout<<"1    Potato Bread Rolls";
@@ -227,7 +228,7 @@ public:
     }
     else
     {
-        switch (biryani)
+        switch (sub_choice)
         {
         case 1:
             cout<<"1    Hyderabadi Biryani";
@@ -245,7 +246,7 @@ public:
     }
 }
 };
-class print :public submenu
+class print :public submenu //inherit calss submenu
 {
 public:
     int your_oder()
@@ -266,18 +267,30 @@ int main(int argc, char const *argv[])
     char Y='Y';
     n1.name();
     top:
-    order o1;
-    submenu s1;
     print p1;
-    s1.orde();
-    s1.main_manu();
-    s1.Quanitity();
-    p1.your_oder();
-    s1.Submenu();
-    p1.prin();
-    if(Y==toupper(repit))
+    orde:
+    sub:
+    p1.orde();  //foode menu class
+    if (choice>5)
     {
-        goto top;
+        printf("\nenter valid choice\n\n");
+        goto orde;
+    }
+    p1.main_manu();
+    cin>>sub_choice;
+    if (sub_choice>3)
+    {
+        printf("\nenter valid choice\n\n");
+        goto sub;
+    }
+
+    p1.Quanitity();
+    p1.your_oder();
+    p1.Submenu();
+    p1.prin();
+    if(Y==toupper(repit)) //add more food dise
+    {
+        goto top;   //to ripit program
     }
     return 0;
 }
