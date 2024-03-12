@@ -1,14 +1,15 @@
 #include<iostream>
 using namespace std;
 char repit;
-int quanitity,pizza,burger,sandwich,roll,biryani,choice,sub_choice;
+int quanitity,pizza,burger,sandwich,roll,biryani,choice,totle,sub_choice;
+int a=80,b=100,c=120,d=150,e=200;
 class custumer_name //enter custumer dityle
 {
 public:
     string n;
     void name()
     {
-        cout<<"                                    -------------------Tops Tech. Fast Food-------------------";
+        cout<<"\t\t\t\t-------------------Tops Tech. Fast Food-------------------";
         cout<<"\nPlase Enter Your Name: ";
         cin>>n;
         cout<<"Hello "<<n;
@@ -22,7 +23,7 @@ public:
     void orde()
     {
         cout<<"what would you like to order?";
-        cout<<endl<<"                                    -------------------Menu-------------------";
+        cout<<endl<<"\t\t\t\t\t-------------------Menu-------------------";
         cout<<"\n1) Pizzas\n2) Burgers\n3) Sandwich\n4) Rolls \n5) Biryani"<<endl;
         cout<<endl<<endl<<"Please Enter your Choice:";
         cin>>choice;
@@ -33,34 +34,43 @@ class menu : public order   //inhrit class order
 public:
     int pizzas()    //show type of pizza
     {
-        pizza:
-        cout<<"1    Sicilian pizza  Rs.100\n2    Greek pizza    Rs.120\n3    Margherita pizza   Rs.150";
+        cout<<"1 Sicilian pizza 100"<<"\n\tGreek pizza    Rs.120\n3\tMargherita pizza   Rs.150";
         cout<<endl<<"Please Enter wich Pizza you would like to have?:";
-       //cin>>pizza;
+        cin>>pizza;
+        sub_choice=pizza;
+       return 0;
     }
     int burgers()   //show type of burgers
     {
-        cout<<"\n1    beef burgers  Rs.120\n2    chicken burgers     Rs.150\n3    lamb burgers   Rs.200";
+        cout<<"\n1\tbeef burgers  Rs.120\n2\tchicken burgers Rs.150\n3\tlamb burgers   Rs.200";
         cout<<endl<<"Please Enter wich Burger you would like to have?:";
-        //cin>>burger;
+        cin>>burger;
+        sub_choice=burger;
+        return 0;
     }
     int sandwichs()    //show type of sandwich
     {
-        cout<<"1    Grilled Cheese  Rs.80\n2    Ham Sandwich    Rs.100\n3    Nutella Sandwich   Rs.120";
+        cout<<"1\tGrilled Cheese  Rs.80\n2\tHam Sandwich    Rs.100\n3\tNutella Sandwich   Rs.120";
         cout<<endl<<"Please Enter wich Sandwich you would like to have?:";
-        //cin>>sandwich;
+        cin>>sandwich;
+        sub_choice=sandwich;
+        return 0;
     }
     int rolls() //show type of rolls
     {
-        cout<<"1    Potato Bread Rolls  Rs.130\n2    Honey Wheat Rolls  Rs.150\n3    Easy Dinner Rolls  Rs.170";
+        cout<<"1\tPotato Bread Rolls  Rs.130\n2\tHoney Wheat Rolls  Rs.150\n3\tEasy Dinner Rolls  Rs.170";
         cout<<endl<<"Please Enter wich Roll you would like to have?:";
-        //cin>>roll;
+        cin>>roll;
+        sub_choice=roll;
+        return 0;
     }
     int biryanis()  //show type of biryanis
     {
-        cout<<"1    Hyderabadi Biryani  Rs.70\n2    Lucknowi Biryani    Rs.90\n3    Dindigul Biryani    Rs.100";
+        cout<<"1\tHyderabadi Biryani  Rs.70\n2\tLucknowi Biryani    Rs.90\n3\tDindigul Biryani    Rs.100";
         cout<<endl<<"Please Enter wich Biryani you would like to have?:";
-       // cin>>biryani;
+        cin>>biryani;
+        sub_choice=biryani;
+       return 0;
     }
     int main_manu() //select main menu
     {
@@ -82,6 +92,7 @@ public:
                 biryanis();
                 break;
         }
+        return 0;
     }
 };
 class submenu: public menu  //inherit class menu
@@ -91,159 +102,176 @@ public:
     {
         cout<<"Please Enter Quanitity:";    //show messages enter Qunaitity
         cin>>quanitity; //enter food quantitiy
+        return 0;
     }
     int Sicilianpizza()
     {
-        return quanitity*100;  //totale amunt of Bill
+        totle+=quanitity*b;  //totale amunt of Bill
+        return totle;
     }
     int Greekpizza()
     {
-        return quanitity*120;
+        totle+=quanitity*c;
+        return totle;
     }
     int Margheritapizza()
     {
-        return quanitity*150;
+        totle+=quanitity*d;
+        return totle;
     }
     int beefburgers()
     {
-        return quanitity*120;
+        totle+=quanitity*c;
+        return totle;
     }
     int chickenburgers()
     {
-        return quanitity*150;
+        totle+=quanitity*d;
+        return totle;
     }
     int lambburgers()
     {
-        return quanitity*200;
+        totle+=quanitity*e;
+        return totle;
     }
     int GrilledCheese()
     {
-        return quanitity*80;
+        totle+=quanitity*a;
+        return totle;
     }
     int HamSandwich()
     {
-        return quanitity*100;
+        totle+=quanitity*b;
+        return totle;
     }
     int NutellaSandwich()
     {
-        return quanitity*120;
+        totle+=quanitity*c;
+        return totle;
     }
     int PotatoBreadRolls()
     {
-        return quanitity*130;
+        totle+=quanitity*c;
+        return totle;
     }
     int HoneyWheatRolls()
     {
-        return quanitity*150;
+        totle+=quanitity*d;
+        return totle;
     }
     int EasyDinnerRolls()
     {
-        return quanitity*170;
+        totle+=quanitity*e;
+        return totle;
     }
     int HyderabadiBiryani()
     {
-        return quanitity*70;
+        totle+=quanitity*a;
+        return totle;
     }
     int LucknowiBiryani()
     {
-        return quanitity*90;
+        totle+=quanitity*b;
+        return totle;
     }
     int DindigulBiryani()
     {
-        return quanitity*100;
+        totle+=quanitity*c;
+        return totle;
     }
     int Submenu()   //select sub menu
     {
     if(choice==1)   //chek wich main menu ex.1.pizza
     {
-        switch (sub_choice)  //select submanu item
+        switch (pizza)  //select submanu item
         {
         case 1:
-            cout<<"1    Sicilian pizza";    //show food name
-            cout<<endl<<"Your Total  Bill is:"<<Sicilianpizza();
+            cout<<"1\tSicilian pizza";   //show food name
+            Sicilianpizza();
             break;
         case 2:
-            cout<<"2    Greek pizza";
-            cout<<endl<<"Your Total  Bill is:"<<Greekpizza();
+            cout<<"2\tGreek pizza";
+            Greekpizza();
             break;
         case 3:
-            cout<<"3    Margherita pizza";
-            cout<<endl<<"Your Total  Bill is:"<<Margheritapizza();
+            cout<<"3\tMargherita pizza";
+            Margheritapizza();
             break;
         }
     }
     else if (choice==2)
     {
-        switch (sub_choice)
+        switch (burger)
         {
         case 1:
-            cout<<"1    beef burgers";
-            cout<<endl<<"Your Total  Bill is:"<<beefburgers();
+            cout<<"1\tbeef burgers";
+            beefburgers();
             break;
         case 2:
-            cout<<"2    chicken burgers";
-            cout<<endl<<"Your Total  Bill is:"<<chickenburgers();
+            cout<<"2\tchicken burgers";
+            chickenburgers();
             break;
         case 3:
-            cout<<"3    lamb burgers";
-            cout<<endl<<"Your Total  Bill is:"<<lambburgers();
+            cout<<"3\tlamb burgers";
+            lambburgers();
             break;
         }
     }
     else if (choice==3)
     {
-        switch (sub_choice)
+        switch (sandwich)
         {
         case 1:
-            cout<<"1    Grilled Cheese";
-            cout<<endl<<"Your Total  Bill is:"<<HamSandwich();
+            cout<<"1\tGrilled Cheese";
+            GrilledCheese();
             break;
         case 2:
-            cout<<"2    Ham Sandwich";
-            cout<<endl<<"Your Total  Bill is:"<<NutellaSandwich();
+            cout<<"2\tHam Sandwich";
+            HamSandwich();
             break;
         case 3:
-            cout<<"3    Nutella Sandwich";
-            cout<<endl<<"Your Total  Bill is:"<<NutellaSandwich();
+            cout<<"3\tNutella Sandwich";
+            NutellaSandwich();
             break;
         }
     }
     else if (choice==4)
     {
-        switch (sub_choice)
+        switch (roll)
         {
         case 1:
-            cout<<"1    Potato Bread Rolls";
-            cout<<endl<<"Your Total  Bill is:"<<PotatoBreadRolls();
+            cout<<"1\tPotato Bread Rolls";
+            PotatoBreadRolls();
             break;
         case 2:
-            cout<<"2    Honey Wheat Rolls";
-            cout<<endl<<"Your Total  Bill is:"<<HoneyWheatRolls();
+            cout<<"2\tHoney Wheat Rolls";
+            HoneyWheatRolls();
             break;
         case 3:
-            cout<<"3    Easy Dinner Rolls";
-            cout<<endl<<"Your Total  Bill is:"<<EasyDinnerRolls();
+            cout<<"3\tEasy Dinner Rolls";
+            EasyDinnerRolls();
             break;
         }
     }
     else
     {
-        switch (sub_choice)
+        switch (biryani)
         {
         case 1:
-            cout<<"1    Hyderabadi Biryani";
-            cout<<endl<<"Your Total  Bill is:"<<HyderabadiBiryani();
+            cout<<"1\tHyderabadi Biryani";
+            HyderabadiBiryani();
             break;
         case 2:
-            cout<<"2    Lucknowi Biryani";
-            cout<<endl<<"Your Total  Bill is:"<<LucknowiBiryani();
+            cout<<"2\tLucknowi Biryani";
+            LucknowiBiryani();
             break;
         case 3:
-            cout<<"3    Dindigul Biryani";
-            cout<<endl<<"Your Total  Bill is:"<<DindigulBiryani();
+            cout<<"3\tDindigul Biryani";
+            DindigulBiryani();
             break;
         }
     }
+    return 0;
 }
 };
 class print :public submenu //inherit calss submenu
@@ -251,17 +279,20 @@ class print :public submenu //inherit calss submenu
 public:
     int your_oder()
     {
-        cout<<endl<<endl<<"               ----------------Your Order----------------"<<endl;
+        cout<<endl<<endl<<"\t\t\t----------------Your Order----------------"<<endl;
+        return 0;
     }
     int prin() //print order dityel
     {
+        cout<<endl<<"Your Total  Bill is:"<<totle;
         cout<<endl<<"Your Order Will be delivered in 40 Minutes";   //your foode delivererd time
-        cout<<endl<<"Thank you FOr Ordering From Tops Tech Fast Food";
+        cout<<endl<<"Thank you For Ordering From Tops Tech Fast Food";
         cout<<endl<<"Would you like to order anything else?Y/N:"<<endl;
         cin>>repit;
+        return 0;
     }
 };
-int main(int argc, char const *argv[])
+int     main(int argc, char const *argv[])
 {
     custumer_name n1;
     char Y='Y';
@@ -277,13 +308,11 @@ int main(int argc, char const *argv[])
         goto orde;
     }
     p1.main_manu();
-    cin>>sub_choice;
     if (sub_choice>3)
     {
         printf("\nenter valid choice\n\n");
         goto sub;
     }
-
     p1.Quanitity();
     p1.your_oder();
     p1.Submenu();
