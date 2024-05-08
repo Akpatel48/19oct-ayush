@@ -1,0 +1,6 @@
+1. **Inline CSS**: CSS styles can be applied directly to HTML elements using the style attribute.
+
+
+2. **Internal CSS**: CSS styles can be placed within the <style> element in the <head> section of an HTML document. These styles will apply to the entire document 
+
+3. **External CSS**: CSS styles can be stored in an external file with a .css extension and linked to HTML documents using the <link> element in the <head> section.

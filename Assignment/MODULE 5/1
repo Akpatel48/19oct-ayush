@@ -1,0 +1,13 @@
+Sure, here are definitions for each term:
+
+1. **Website**: A website is a collection of related web pages that are typically identified with a common domain name and published on at least one web server. Websites are accessed via the Internet or a local area network and can serve a variety of purposes, such as providing information, selling products or services, or facilitating communication.
+
+2. **Webpage**: A webpage is a single document or resource that is part of a website and is accessed through a web browser. Webpages can contain various types of content, including text, images, videos, and interactive elements. They are typically written in languages like HTML (Hypertext Markup Language) and styled with CSS (Cascading Style Sheets).
+
+3. **Web browser**: A web browser is a software application used to access and navigate the World Wide Web. It interprets and displays web content, allowing users to view webpages, interact with online services, and access other resources on the Internet. Popular web browsers include Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari.
+
+4. **Web server**: A web server is a computer program or hardware device that stores, processes, and delivers web content to clients over the Internet or a local network. Web servers host websites and respond to requests from web browsers by sending the requested webpages and resources. Examples of web server software include Apache HTTP Server, Nginx, Microsoft Internet Information Services (IIS), and LiteSpeed.
+
+5. **HTML (Hypertext Markup Language)**: HTML is the standard markup language used to create and structure webpages on the World Wide Web. It consists of a series of elements or tags that define the structure and content of a webpage, such as headings, paragraphs, links, images, and forms. HTML is interpreted by web browsers to render webpages as visual documents.
+
+6. **CSS (Cascading Style Sheets)**: CSS is a style sheet language used to control the presentation and layout of HTML documents. It allows web developers to define the appearance of web content, including colors, fonts, spacing, and positioning. By separating the presentation from the structure of a webpage, CSS enables consistent styling across multiple pages and facilitates easier maintenance and updates.
