@@ -34,7 +34,7 @@ class menu : public order   //inhrit class order
 public:
     int pizzas()    //show type of pizza
     {
-        cout<<"1 Sicilian pizza 100"<<"\n\tGreek pizza    Rs.120\n3\tMargherita pizza   Rs.150";
+        cout<<"1 Sicilian pizza 100"<<"\n\t2 Greek pizza    Rs.120\n3\tMargherita pizza   Rs.150";
         cout<<endl<<"Please Enter wich Pizza you would like to have?:";
         cin>>pizza;
         sub_choice=pizza;
@@ -58,7 +58,7 @@ public:
     }
     int rolls() //show type of rolls
     {
-        cout<<"1\tPotato Bread Rolls  Rs.130\n2\tHoney Wheat Rolls  Rs.150\n3\tEasy Dinner Rolls  Rs.170";
+        cout<<"1\tPotato Bread Rolls  Rs.120\n2\tHoney Wheat Rolls  Rs.150\n3\tEasy Dinner Rolls  Rs.200";
         cout<<endl<<"Please Enter wich Roll you would like to have?:";
         cin>>roll;
         sub_choice=roll;
@@ -66,7 +66,7 @@ public:
     }
     int biryanis()  //show type of biryanis
     {
-        cout<<"1\tHyderabadi Biryani  Rs.70\n2\tLucknowi Biryani    Rs.90\n3\tDindigul Biryani    Rs.100";
+        cout<<"1\tHyderabadi Biryani  Rs.80\n2\tLucknowi Biryani    Rs.100\n3\tDindigul Biryani    Rs.120";
         cout<<endl<<"Please Enter wich Biryani you would like to have?:";
         cin>>biryani;
         sub_choice=biryani;
@@ -321,5 +321,5 @@ int     main(int argc, char const *argv[])
     {
         goto top;   //to ripit program
     }
-    return 0;
+    return 0;
 }
